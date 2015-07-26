@@ -60,7 +60,7 @@ def maybe_better():
         if res == 0:
             return res
     return 'error'
-{% endhighlight %
+{% endhighlight %}
 
 But here's another idea.   The retry functionality is a completely separate
 issue from the original problem.  It's really a shame that the function has to
@@ -82,7 +82,7 @@ def repeat_until_return_value_in(good_results, max_tries=5):
             return 'error'
         return inner
     return outer
-{% endhighlight %
+{% endhighlight %}
 
 This decorator takes care of the tedious but mandatory result-checking.   The
 base function no longer has to worry about such things.   It just does its job
@@ -103,7 +103,7 @@ def also_better():
 @repeat_until_return_value_in((2, 22,), max_tries=7)
 def another_better():
     return random.choice(range(11))
-{% endhighlight %
+{% endhighlight %}
 
 More to the story.   The original problem is usually in the form of a web
 request and the acceptance trigger is the response status code.   So here is a
@@ -156,19 +156,11 @@ cover both scenarios.  And that will take us to the new repo.... stay tuned...
 {% highlight python %}
 
 
-{% endhighlight %
+{% endhighlight %}
 
 
 
 
-{% highlight python %}
-{% endhighlight %
-
-{% highlight python %}
-{% endhighlight %
-
-{% highlight python %}
-{% endhighlight %
 
 
 
