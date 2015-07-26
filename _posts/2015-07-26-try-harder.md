@@ -49,7 +49,7 @@ def br2(tries=0):
 
 
 The offensive thing about the recursive version is it introduces a new parameter
-into the function.  Here is an iterative version.
+into the function, strictly for retry-tracking.  Here is an iterative version.
 
 {% highlight python %}
 def maybe_better():
@@ -64,8 +64,15 @@ def maybe_better():
 
 But here's another idea.   The retry functionality is a completely separate
 issue from the original problem.  It's really a shame that the function has to
-take account of all this retry bookkeeping.   This looks like a job for a
-decorator!
+take account of all this retry bookkeeping.   Wouldn't it be nice to define the
+function this way:
+
+{% highlight python %}
+def best():
+    return random.choice(range(11))
+{% endhighlight %}
+
+Good news!   It can be done.  This looks like a job for a decorator!
 
 
 {% highlight python %}
