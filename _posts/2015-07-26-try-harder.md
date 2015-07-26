@@ -6,7 +6,9 @@ title: Try Harder
 {{ page.title }}
 ================
 
-<p class="meta">Try harder</p>
+keywords:  python decorator "separation of concerns"
+
+<p class="meta">repeat until satisfied</p>
 
 
 Here is a pattern I've been seeing a lot.  We make a call and want to only
@@ -82,9 +84,9 @@ def repeat_until_return_value_in(good_results, max_tries=5):
     return outer
 {% endhighlight %
 
-This decorator takes care of the tedious result-checking.   The base function
-no longer has to worry about such things.   It just does its job and goes
-merrily on its way.   
+This decorator takes care of the tedious but mandatory result-checking.   The
+base function no longer has to worry about such things.   It just does its job
+and goes merrily on its way.   
 
 
 {% highlight python %}
@@ -103,11 +105,75 @@ def another_better():
     return random.choice(range(11))
 {% endhighlight %
 
-More to the story
+More to the story.   The original problem is usually in the form of a web
+request and the acceptance trigger is the response status code.   So here is a
+simulation of that scenario, with mocked-up Response objects.
+
+
+{% highlight python %}
+def repeat_until_status_code_in(good_codes, max_tries=5): 
+    def outer(func):
+        @functools.wraps(func)
+        def inner(*pos, **kw):
+            i = 0
+            while i < max_tries:
+                i += 1
+                response = func(*pos, **kw)
+                if response.status_code in good_codes:
+                    return response
+            return 'no good response in %s attempts' % max_tries
+        return inner
+    return outer
+
+
+class MockResponse(object):
+    codes = [100, 200, 201, 300, 400, 404, 500]
+    def __init__(self, url, **kw):
+        self.status_code = random.choice(self.codes)
+        self.text = 'mock web service response. %s' % time.ctime()
+
+
+def make_request(url):
+    return MockResponse(url)
+
+
+@repeat_until_status_code_in([200, 201], max_tries=7)
+def yet_another(url):
+    return make_request(url)
+
+
+@repeat_until_status_code_in([200], max_tries=2)
+def and_one_more(url):
+    return make_request(url)
+{% endhighlight %
+
+Seeing the two different versions immediately suggests a generalization to
+cover both scenarios.  And that will take us to the new repo.... stay tuned...
+
+
+
+
+{% highlight python %}
+
+
+{% endhighlight %
+
+
 
 
 {% highlight python %}
 {% endhighlight %
+
+{% highlight python %}
+{% endhighlight %
+
+{% highlight python %}
+{% endhighlight %
+
+
+
+
+
 
 * about this
 * that
