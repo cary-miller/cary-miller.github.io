@@ -9,55 +9,79 @@ title: Try Harder
 <p class="meta">Try harder</p>
 
 
-Here is a pattern I've been seeing a lot.
+Here is a pattern I've been seeing a lot.  We make a call and want to only
+accept certain responses.
 
 
-    !python
-    def foo():
-        print 'bar'
-
-
-<pre>
-  <code class="python">
-    def foo():
-        print 'bar'
-  </code>
-</pre>
-
-
-
-{% highlight ruby linenos %}
-def show
-  puts "Outputting a very lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong line"
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
+{% highlight python %}
+def typical_func(tries=0):
+    res = 'error'
+    if tries < 4:
+        res = random.choice(range(11))
+        if res != 0:
+            return typical_func(tries+1)
+    return res
 {% endhighlight %}
 
+First question:  Why is this done recursively?   Seems like a job for iteration.
+But you want it recursive?  OK.   Here are better recursive versions, with
+shallower indentation.
+
+
+{% highlight python %}
+def better_recursive(tries=0):
+    if tries >= 4:
+        return 'error'
+    res = random.choice(range(11))
+    if res == 0:
+        return res
+    return typical_func(tries+1)
+
+
+def br2(tries=0):
+    if tries >= 4:
+        return 'error'
+    res = random.choice(range(11))
+    return res if res == 0 else typical_func(tries+1)
+{% endhighlight %}
+
+
+The offensive thing about the recursive version is it introduces a new parameter
+into the function.  Here is an iterative version.
+
+{% highlight python %}
+def maybe_better():
+    tries=0
+    while tries < 4:
+        tries += 1
+        res = random.choice(range(11))
+        if res == 0:
+            return res
+    return 'error'
+{% endhighlight %
+
+But here's another idea.   The retry functionality is a completely separate
+issue from the original problem.  It's really a shame that the function has to
+take account of all this retry bookkeeping.   This looks like a job for a
+decorator!
+
+
+{% highlight python %}
+{% endhighlight %
+
+
+{% highlight python %}
+{% endhighlight %
+
+* about this
+* that
+* the other
 
 {% highlight python linenos %}
 def foo():
     print 'bar'
 
 {% endhighlight %}
-
-{% highlight python %}
-def foo():
-    # this time without linenos
-    print 'bar'
-
-{% endhighlight %}
-
-
-
-
-
-* about this
-* that
-* the other
 
 
 --
