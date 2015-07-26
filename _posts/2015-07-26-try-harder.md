@@ -67,7 +67,43 @@ decorator!
 
 
 {% highlight python %}
+def repeat_until_return_value_in(good_results, max_tries=5):
+    def outer(func):
+        @functools.wraps(func)
+        def inner(*pos, **kw):
+            i = 0
+            while i < max_tries:
+                i += 1
+                res = func(*pos, **kw)
+                if res in good_results:
+                    return res
+            return 'error'
+        return inner
+    return outer
 {% endhighlight %
+
+This decorator takes care of the tedious result-checking.   The base function
+no longer has to worry about such things.   It just does its job and goes
+merrily on its way.   
+
+
+{% highlight python %}
+@repeat_until_return_value_in((0,))
+def better():
+    return random.choice(range(11))
+
+
+@repeat_until_return_value_in((0, 7, 9), max_tries=3)
+def also_better():
+    return random.choice(range(11))
+
+
+@repeat_until_return_value_in((2, 22,), max_tries=7)
+def another_better():
+    return random.choice(range(11))
+{% endhighlight %
+
+More to the story
 
 
 {% highlight python %}
