@@ -1,6 +1,6 @@
 ---
 layout: post
-title: first post
+title: Try Harder
 ---
 
 {{ page.title }}
@@ -15,6 +15,16 @@ Here is a pattern I've been seeing a lot.
     !python
     def foo():
         print 'bar'
+
+
+<pre>
+  <code class="python">
+    def foo():
+        print 'bar'
+  </code>
+</pre>
+
+
 
 * about this
 * that
