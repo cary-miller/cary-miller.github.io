@@ -44,6 +44,14 @@ def foo():
 
 {% endhighlight %}
 
+{% highlight python %}
+def foo():
+    # this time without linenos
+    print 'bar'
+
+{% endhighlight %}
+
+
 
 
 
