@@ -145,7 +145,7 @@ def yet_another(url):
 @repeat_until_status_code_in([200], max_tries=2)
 def and_one_more(url):
     return make_request(url)
-{% endhighlight %
+{% endhighlight %}
 
 Seeing the two different versions immediately suggests a generalization to
 cover both scenarios.  And that will take us to the new repo.... stay tuned...
