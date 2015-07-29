@@ -170,18 +170,7 @@ cover both scenarios.  And that will take us to the new repo....
 {% endhighlight %}
 
 
-
-* about this
-* that
-* the other
-
-{% highlight python linenos %}
-def foo():
-    print 'bar'
-
-{% endhighlight %}
-
-
 --
 
-[Discuss RDD on Hacker News](http://news.ycombinator.com/item?id=1627246)
+
+
