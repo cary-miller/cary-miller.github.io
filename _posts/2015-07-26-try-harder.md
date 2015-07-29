@@ -62,7 +62,9 @@ def maybe_better():
     return 'error'
 {% endhighlight %}
 
-But here's another idea.   The retry functionality is a completely separate
+But these are just marginal improvements.   The function should not have to
+think about retries.
+Here's another idea.   The retry functionality is a completely separate
 issue from the original problem.  It's really a shame that the function has to
 take account of all this retry bookkeeping.   Wouldn't it be nice to define the
 function this way:
@@ -155,10 +157,9 @@ def and_one_more(url):
 {% endhighlight %}
 
 Seeing the two different versions immediately suggests a generalization to
-cover both scenarios.  And that will take us to the new repo.... stay tuned...
+cover both scenarios.  And that will take us to the new repo.... 
 
-
-https://github.com/cary-miller/repeat/blob/master/until.py
+[repeat_until_satisfied](https://github.com/cary-miller/repeat/blob/master/until.py)
 
 
 
@@ -167,13 +168,6 @@ https://github.com/cary-miller/repeat/blob/master/until.py
 
 
 {% endhighlight %}
-
-
-
-
-
-
-
 
 
 
