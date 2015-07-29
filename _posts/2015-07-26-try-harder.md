@@ -157,8 +157,7 @@ def and_one_more(url):
 {% endhighlight %}
 
 Seeing the two different versions immediately suggests a generalization to
-cover both scenarios.  And that will take us to the new repo.... 
-
+cover both scenarios.  And that will take us to the new repo,
 [repeat_until_satisfied](https://github.com/cary-miller/repeat/blob/master/until.py)
 
 
