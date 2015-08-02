@@ -18,9 +18,11 @@ make a difference in my life.   Specifically, my presentations are going to
 change.   The bullet points are not going away entirely but maybe there will be
 fewer of them.   Here is what I learned.
 <img src="https://pollnitz.files.wordpress.com/2010/04/tufte-wallpaper_small.png" />
-<img src="http://www.edwardtufte.com/tufte/graphics/home_stalin_poster.jpg" />
 
+![tufte_stalin poster](http://www.edwardtufte.com/tufte/graphics/home_stalin_poster.jpg) 
 
+Hey, this [clojure](http://www.lispcast.com/annotated-clojure-core-reduce)
+guy is familiar with Tufte!
 
 
 
