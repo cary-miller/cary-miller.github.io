@@ -22,7 +22,7 @@ fanatic in coders so I try to keep Alistair Cockburn's
 
 
 The [c2][] web site is loaded with interesting programming ideas,
-such as [GoodVariableNames][].  It's
+such as [Good Variable Names][].  It's
 also got a lot of rabbit holes relating to bad names.   Another trove, with a
 functional (clojure) orientation, is [lispcast][].   This
 guy advocates dealing with the 
@@ -39,6 +39,7 @@ Of course there's a time and a place for everything.
 
 
 Another take on it from [codemesh][]
+
 > Names are the one and only tool you have to explain what a variable does
 > in every place it appears, without having to scatter comments everywhere.
 
@@ -54,7 +55,7 @@ which leads to ...
 [avoid]: http://www.lispcast.com/avoid-naming-at-all-costs
 [codemesh]: www.codemesh.io/static/upload/.../141537864327479namingthings.pdf)
 [c2]: http://c2.com
-[good names]: http://c2.com/cgi/wiki?GoodVariableNames
+[good variable names]: http://c2.com/cgi/wiki?GoodVariableNames
 [oath]: http://alistair.cockburn.us/Oath+of+Non-Allegiance
 [id]: url "optional title"
 [id]: url "optional title"
