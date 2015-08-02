@@ -19,7 +19,7 @@ change.   The bullet points are not going away entirely but maybe there will be
 fewer of them.   Here is what I learned.
 <img src="https://pollnitz.files.wordpress.com/2010/04/tufte-wallpaper_small.png" />
 
-![tufte_stalin poster](http://www.edwardtufte.com/tufte/graphics/home_stalin_poster.jpg) 
+![tufte_stalin poster][stalin]
 
 Hey, this [clojure](http://www.lispcast.com/annotated-clojure-core-reduce)
 guy is familiar with Tufte!
@@ -28,7 +28,16 @@ guy is familiar with Tufte!
 
 
 [Tufte](http://www.edwardtufte.com/tufte/)
+[again][tufte]
 
+
+[tufte]: http://www.edwardtufte.com/tufte/ "Tufte web page"
+[stalin]: http://www.edwardtufte.com/tufte/graphics/home_stalin_poster.jpg "Tufte stalin poster"
+[reduce]: http://www.lispcast.com/annotated-clojure-core-reduce "reduce in clojure"
+[id]: url "optional title"
+[id]: url "optional title"
+[id]: url "optional title"
+[id]: url "optional title"
 
 
 
