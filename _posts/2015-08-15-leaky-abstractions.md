@@ -1,17 +1,16 @@
-Joel's Law:
-    `ALL non-trivial abstractions are leaky`
+Joel's Law `ALL non-trivial abstractions are leaky`
+===================================================
 
 In other words we have to understand the underlying technology beneath our target
 system.
 
 
-
-Local examples
+Examples
 
 nfs / cifs
 
-    * mv /mnt/scratch01/blah /mnt/scratch02/blah # fails
-    * mv /mnt/scratch01/blah /mnt/scratch02/blah # used to work
+> mv /mnt/scr01/blah /mnt/scr02/blah # fails
+  mv /mnt/scr01/blah /mnt/scr02/blah # used to work
 
 
 function making web service call
@@ -29,7 +28,7 @@ nfs / cifs, redis, es, rabbitmq, tickettool
     all abstract away the notion of separate computers.
         for specific task
 
-principles:
+# principles #
     abstract away the right parts (http, url-construction, retry)
         be frictionless
     do not get between the user and the service
@@ -41,7 +40,7 @@ principles:
 
 zap / spark
     read whole thing vs
-    extract certain things
+    extract small parts
 
 tickettool
 
@@ -62,10 +61,6 @@ bad/leaky local abstractions
     nfs/cifs  re file moving
     no.   The question re an abstraction is not so much "Is it good or bad?"
     but more,  "What are its limits?".
-
-auth sucks
-    want proof 
-    639962
 
 
 
