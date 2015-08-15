@@ -9,8 +9,26 @@ Examples
 
 nfs / cifs
 
-> mv /mnt/scr01/blah /mnt/scr02/blah # fails
-  mv /mnt/scr01/blah /mnt/scr02/blah # used to work
+{% highlight bash %}
+  mv /mnt/scr1/blah /mnt/scr2/blah # fails
+  mv /mnt/scr1/blah /mnt/scr2/blah # used to work
+{% endhighlight %}
+
+{% highlight python %}
+def repeat_until_status_code_in(good_codes, max_tries=5): 
+    def outer(func):
+        @functools.wraps(func)
+        def inner(*pos, **kw):
+            i = 0
+            while i < max_tries:
+                i += 1
+                response = func(*pos, **kw)
+                if response.status_code in good_codes:
+                    return response
+            return 'no good response in %s attempts' % max_tries
+        return inner
+    return outer
+{% endhighlight %}
 
 
 function making web service call
