@@ -20,21 +20,24 @@ systems were mounted.
 
 ### Example 2 (`web service client`)
 
-fails due to
+fails intermittently due to
 
 * timeout
 * network prob
 
+
+nfs / cifs, redis, es, rabbitmq, logtool
 
 * redis - webdis - webdis.py
 * es - whatitsname - whatsit.py
 * rabbitmq -
 * zeromq -
 
-nfs / cifs, redis, es, rabbitmq, tickettool
 
-    all abstract away the notion of separate computers.
-        for specific task
+nfs / cifs, redis, es, rabbitmq, logtool
+
+        all abstract away the notion of separate computers.
+            for specific task
 
 # principles #
     abstract away the right parts (http, url-construction, retry)
@@ -50,7 +53,7 @@ zap / spark
     read whole thing vs
     extract small parts
 
-tickettool
+logtool
 
 ins-queue
     r2.py
