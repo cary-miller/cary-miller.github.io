@@ -5,9 +5,7 @@ In other words we have to understand the technology underlying the target
 system.
 
 
-### Example 1
-
-nfs / cifs
+### Example 1 (`nfs / cifs`)
 
 {% highlight bash %}
 mv /mnt/scr1/blah /mnt/scr2/blah # fails
@@ -19,12 +17,11 @@ systems were mounted.
 
 
 
-### Example 2
+### Example 2 (`web service client`)
 
-
-web service call fails due to
-    * timeout
-    * network prob
+fails due to
+* timeout
+* network prob
 
 
 redis - webdis - webdis.py
