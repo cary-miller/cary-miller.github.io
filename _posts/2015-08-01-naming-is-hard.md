@@ -25,16 +25,17 @@ The [c2][] web site is loaded with interesting programming ideas,
 such as [Good Variable Names][].  It's
 also got a lot of rabbit holes relating to bad names.   Another trove, with a
 functional (clojure) orientation, is [lispcast][].   This
-guy advocates dealing with the 
-[naming issue by avoidance][avoid].   
-His main point is to avoid naming things by
-
-- inlining functions
-- etc
-
-
-Inlining a function results in an anonymous function which now requires a comment.
-show examples.
+guy has good advice until he advocates dealing with the 
+[naming issue by avoidance][avoid].   He advises
+to avoid naming things by inlining code.  Of course this advice leads directly
+to anonymous functions.   And this does not solve the problem at all.   The
+reader/maintaner who comes across the anonymous function now has to figure out
+what it does, and at least internally, create a name for it.   One of the big
+advantages of giving something a name is to avoid the `decipher it anew every
+time you look at it` problem.   Anonymous functions will get names.   Every new
+reader will come up with a name for that anonymous function and each will be
+different.   If you name it explicitly, then everybody will at least have the
+same name for it.
 Of course there's a time and a place for everything.
 
 
