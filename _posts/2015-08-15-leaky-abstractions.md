@@ -1,11 +1,17 @@
 Joel's Law:
-    ALL non-trivial abstractions are leaky.
+    `ALL non-trivial abstractions are leaky`
+
+In other words we have to understand the underlying technology beneath our target
+system.
+
+
 
 Local examples
 
 nfs / cifs
-    mv /mnt/scratch01/blah /mnt/scratch02/blah # fails
-    mv /mnt/scratch01/blah /mnt/scratch02/blah # used to work
+
+    * mv /mnt/scratch01/blah /mnt/scratch02/blah # fails
+    * mv /mnt/scratch01/blah /mnt/scratch02/blah # used to work
 
 
 function making web service call
