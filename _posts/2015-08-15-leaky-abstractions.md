@@ -16,10 +16,14 @@ Why does it fail where it formerly worked?   Something changed in the way the
 systems were mounted.
 
 
+    this should be  end of line 1
+    a code block.   end of line 2
+
 
 ### Example 2 (`web service client`)
 
 fails due to
+
 * timeout
 * network prob
 
