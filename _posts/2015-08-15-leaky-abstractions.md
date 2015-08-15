@@ -5,7 +5,7 @@ In other words we have to understand the technology underlying the target
 system.
 
 
-Examples
+### Example 1
 
 nfs / cifs
 
@@ -19,14 +19,12 @@ systems were mounted.
 
 
 
+### Example 2
 
 
-
-
-function making web service call
-    fails due to
-        timeout
-        network prob
+web service call fails due to
+    * timeout
+    * network prob
 
 
 redis - webdis - webdis.py
