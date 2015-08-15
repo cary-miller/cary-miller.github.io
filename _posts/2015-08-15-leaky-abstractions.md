@@ -39,7 +39,8 @@ nfs / cifs, redis, es, rabbitmq, logtool
         all abstract away the notion of separate computers.
             for specific task
 
-# principles #
+## principles #
+
     abstract away the right parts (http, url-construction, retry)
         be frictionless
     do not get between the user and the service
@@ -55,8 +56,6 @@ zap / spark
 
 logtool
 
-ins-queue
-    r2.py
 
 
 promises - async - fetch result that takes arbitrary time
