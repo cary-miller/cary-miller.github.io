@@ -51,27 +51,26 @@ nfs / cifs, redis, es, rabbitmq, logtool
 
 
 zap / spark
+
     read whole thing vs
     extract small parts
-
-logtool
-
 
 
 promises - async - fetch result that takes arbitrary time
 
 
 good local abstractions
+
     webdis.py
     es.py
     repeat_until_satisfied
 
 
 bad/leaky local abstractions
+
     nfs/cifs  re file moving
     no.   The question re an abstraction is not so much "Is it good or bad?"
     but more,  "What are its limits?".
-
 
 
 
