@@ -9,8 +9,7 @@ system.
 ### Example 1 (`nfs / cifs`)
 
 {% highlight bash %}
-mv /mnt/scr1/blah /mnt/scr2/blah # fails
-mv /mnt/scr1/blah /mnt/scr2/blah # used to work
+mv /mnt/scr1/blah /mnt/scr2/blah # fails.  worked before
 {% endhighlight %}
 
 Why does it fail where it formerly worked?   Something changed in the way the
@@ -27,12 +26,13 @@ fails due to
 * network prob
 
 
-redis - webdis - webdis.py
-es - whatitsname - whatsit.py
-rabbitmq -
-zeromq -
+* redis - webdis - webdis.py
+* es - whatitsname - whatsit.py
+* rabbitmq -
+* zeromq -
 
 nfs / cifs, redis, es, rabbitmq, tickettool
+
     all abstract away the notion of separate computers.
         for specific task
 
