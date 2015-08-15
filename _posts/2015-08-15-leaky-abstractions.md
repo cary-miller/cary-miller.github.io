@@ -1,7 +1,7 @@
-Joel's Law `ALL non-trivial abstractions are leaky`
+Joel's Law `All non-trivial abstractions are leaky`
 ===================================================
 
-In other words we have to understand the underlying technology beneath our target
+In other words we have to understand the technology underlying the target
 system.
 
 
@@ -10,25 +10,17 @@ Examples
 nfs / cifs
 
 {% highlight bash %}
-  mv /mnt/scr1/blah /mnt/scr2/blah # fails
-  mv /mnt/scr1/blah /mnt/scr2/blah # used to work
+mv /mnt/scr1/blah /mnt/scr2/blah # fails
+mv /mnt/scr1/blah /mnt/scr2/blah # used to work
 {% endhighlight %}
 
-{% highlight python %}
-def repeat_until_status_code_in(good_codes, max_tries=5): 
-    def outer(func):
-        @functools.wraps(func)
-        def inner(*pos, **kw):
-            i = 0
-            while i < max_tries:
-                i += 1
-                response = func(*pos, **kw)
-                if response.status_code in good_codes:
-                    return response
-            return 'no good response in %s attempts' % max_tries
-        return inner
-    return outer
-{% endhighlight %}
+Why does it fail where it formerly worked?   Something changed in the way the
+systems were mounted.
+
+
+
+
+
 
 
 function making web service call
